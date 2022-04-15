@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <div id="description">
+                <h1 class="text1">Калькулятор на JavaScript.</h1>
+                <p>Функции калькулятора:<br></p>
+                    <ul id="features" >
+                        <li>Ввод и правка числовых значений в десятичной системе.</li>
+                        <li>Базовые арифметические операции.</li>
+                            <ul class="sub_features" >
+                                <li>Сложение (+)</li>
+                                <li>Вычитание (-)</li>
+                                <li>Умножение (х)</li>
+                                <li>Деление (÷)</li>
+                            </ul>
+                        <li>Дополнительные арифметические операции.</li>
+                            <ul class="sub_features" >
+                                <li>Возведение в степень (pow)</li>
+                                <li>Квадратный корень (sqrt)</li>
+                                <li>Смена знака (sign)</li>
+                                <li>Факториал (fact)</li>
+                            </ul>
+                        <li>Факториал считается как от целых, так и от дробных чисел (для дробных чисел <a href="http://desyatbukv.blogspot.com/2012/10/faktorial-drobnyh-chisel.html">http://desyatbukv.blogspot.com/2012/10/faktorial-drobnyh-chisel.html</a>).</li>
+                        <li>При нажатии на "=" без дополнительных операций применяет последнее действие к ответу</li>
+                        <li>При нажатии оператора после ввода второго числа начинает работать с ответом как с первым числом</li>
+                        <li>Нажатие на "CS" приводит к удалению последнего символа справа</li>
+                        <li>Одиночное нажатие на "C" приводит к очищению экрана и сбросу состояния</li>
+                        <li>Двойное нажатие на "C" приводит к полному сбросу калькулятора, включая историю</li>
+                        <li>Запись истории в поле справа.</li>
+                    </ul>
+            </div>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="calculator">
+            <!-- Screen and clear key -->
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="top">
+                                    <span class="clear">C</span>
+                                    <span class="backspace">CS</span>
+                                    <div class="screen"></div>
+                                </div>
+
+                                <table>
+                                    <tr>
+                                        <div class="keys">
+                                            <!-- operators and other keys -->
+                                            <span>7</span>
+                                            <span>8</span>
+                                            <span>9</span>
+                                            <span class="operator">+</span>
+                                            <span class="operator1">pow</span>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="keys">
+                                        <span>4</span>
+                                        <span>5</span>
+                                        <span>6</span>
+                                        <span class="operator">-</span>
+                                        <span class="operator1">sqrt</span>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="keys">
+                                        <span>1</span>
+                                        <span>2</span>
+                                        <span>3</span>
+                                        <span class="operator">÷</span>
+                                        <span class="operator1">sign</span>
+                                        </div>
+                                    </tr>
+                                    <tr>
+                                        <div class="keys">
+                                            <span>0</span>
+                                            <span>.</span>
+                                            <span class="eval">=</span>
+                                            <span class="operator">x</span>
+                                            <span class="operator1">fact</span>
+                                        </div>
+                                    </tr>
+                                </table>
+                            </td>
+
+                            <td>
+                                <div class="right">
+                                    <div class="history">
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+     <script src="js/calculator.js" type="text/javascript"></script>
+
+</body>

@@ -1,0 +1,99 @@
+<html>
+    <body>
+    
+        <p>
+            Bubble sort example
+        </p>
+        
+        <div id="unsortedArray">
+            Unsorted array: <br>
+        </div>
+        
+        <div id="sortedArrayAsc">
+            Sorted array ascending: <br>
+        </div>
+        
+        <div id="sortedArrayDesc">
+            Sorted array descending: <br>
+        </div>
+        
+        <script>
+        var numbers = [4, 2, 3, 1, 5, 9, 46, 12, 35,13532,643,21,1,412,352, 0];
+        var numbers1 = numbers;
+        
+        printArray(numbers,"unsortedArray");
+        
+        numbers = sortBubbleArray(numbers,"ASC");
+        printArray(numbers,"sortedArrayAsc");
+        
+        numbers = sortBubbleArray(numbers1,"DESC");
+        printArray(numbers1,"sortedArrayDesc");
+        
+        
+        function printArray(arrayToPrint, elementId)
+        {
+            for(i = 0; i < arrayToPrint.length; i++)
+            {
+                document.getElementById(elementId).innerHTML += arrayToPrint[i] + "<br>";                
+            }
+             document.getElementById(elementId).innerHTML += "<br>";
+        }
+        
+        function sortBubbleArray (arrayToSort, sortDirection)
+        { 
+            hasSwapped = false;
+            if(sortDirection === "ASC")
+            {
+                for(var i = 0; i < arrayToSort.length; i++ )
+                {
+                    for(var j = 0; j < arrayToSort.length - i - 1; j++ )
+                    {
+                        if(arrayToSort[j] > arrayToSort[j + 1])
+                        {
+                            hasSwapped = true;
+                            var tmp = arrayToSort[j];
+                            arrayToSort[j] = arrayToSort[j+1];
+                            arrayToSort[j+1] = tmp;
+                        }
+                    }
+                    if(!hasSwapped)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        hasSwapped = false;
+                    }
+                }
+            }
+            
+            if(sortDirection === "DESC")
+            {
+                for(var i = 0; i < arrayToSort.length; i++ )
+                {
+                    for(var j = 0; j < arrayToSort.length - i - 1; j++ )
+                    {
+                        if(arrayToSort[j] < arrayToSort[j + 1])
+                        {
+                            hasSwapped = true;
+                            var tmp = arrayToSort[j];
+                            arrayToSort[j] = arrayToSort[j+1];
+                            arrayToSort[j+1] = tmp;
+                        }
+                    }
+                    if(!hasSwapped)
+                    {
+                        break;
+                    }
+                    else
+                    {
+                        hasSwapped = false;
+                    }
+                }
+            }
+            return arrayToSort;
+        }
+        </script>
+    
+    </body>
+</html>
